@@ -1,0 +1,89 @@
+<div class="row container">
+    <div class="col">
+        <h1>Usando Promesas (async)</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr style="background: orange">
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Alias</th>
+                    <th>Franquicia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let heroe of heroesPromise | async">
+                    <td>{{ heroe.name }}</td>
+                    <td>{{ heroe.lastname }}</td>
+                    <td>{{ heroe.nickname }}</td>
+                    <td>{{ heroe.franchise }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h1>Usando Observables (async)</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr style="background: pink;">
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Alias</th>
+                    <th>Franquicia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let heroe of heroes$ | async">
+                    <td>{{ heroe.name }}</td>
+                    <td>{{ heroe.lastname }}</td>
+                    <td>{{ heroe.nickname }}</td>
+                    <td>{{ heroe.franchise }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h1>Usando Observables (subscription sin async)</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr style="background: lightblue;">
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Alias</th>
+                    <th>Franquicia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let heroe of heroesSubs">
+                    <td>{{ heroe.name }}</td>
+                    <td>{{ heroe.lastname }}</td>
+                    <td>{{ heroe.nickname }}</td>
+                    <td>{{ heroe.franchise }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h1>Usando Observables (map y async)</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr style="background: lightseagreen;">
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Alias</th>
+                    <th>Franquicia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let heroe of heroesMap$ | async">
+                    <td>{{ heroe.name }}</td>
+                    <td>{{ heroe.lastname }}</td>
+                    <td>{{ heroe.nickname }}</td>
+                    <td>{{ heroe.franchise }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
